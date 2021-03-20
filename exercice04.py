@@ -13,7 +13,7 @@ def run():
     assert get_category(99) == "Cadet"
     
     try:
-    get_category(1)
+        get_category(1)
         raise AssertionError()
     except ValueError:
         pass
