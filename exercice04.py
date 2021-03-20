@@ -11,4 +11,9 @@ def run():
     assert get_category(11) == "Minime"
     assert get_category(12) == "Cadet"
     assert get_category(99) == "Cadet"
+    
+    try:
     get_category(1)
+        raise AssertionError()
+    except ValueError:
+        pass

@@ -23,7 +23,7 @@ for exercise in all_exercises:
     try:
         exercise()
         print(f"✅ Exercice {i} : passé")
-    except (AssertionError, ValueError):
+    except AssertionError:
         print(f"❌ Exercice {i} : raté")
     finally:
         i += 1
