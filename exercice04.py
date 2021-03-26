@@ -1,6 +1,18 @@
 def get_category(age):
-    # Votre code ici
-    return
+    result = None
+    
+    if age < 6:
+        raise ValueError("Age incorrect")
+    elif age >= 6 and age < 8:
+        result = "Poussin"
+    elif age >= 8 and age < 10:
+        result = "Pupille"
+    elif age >= 10 and age < 12:
+        result = "Minime"
+    else:
+        result = "Cadet"
+    
+    return result
 
 def run():
     assert get_category(6) == "Poussin"
@@ -13,7 +25,7 @@ def run():
     assert get_category(99) == "Cadet"
     
     try:
-    get_category(1)
+        get_category(1)
         raise AssertionError()
     except ValueError:
         pass

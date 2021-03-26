@@ -1,6 +1,11 @@
 def is_product_negative(a, b):
-    # Votre code ici
-    return
+    # a     b       r
+    # -1    -1      False
+    # -1    1       True
+    # 1     -1      True
+    # 1     1       False
+    return (a < 0 and b >= 0) or (a >= 0 and b < 0)
+
 
 def run():
     assert is_product_negative(6, 7) == False

@@ -1,6 +1,15 @@
 def is_number_correct(number):
-    # Votre code ici
-    return
+    result = None
+    
+    if (number >= 10 and number <= 20):
+        result = (True, 0)
+    else:
+        if (number < 10):
+            result = (False, 10 - number)
+        else:
+            result = (False, 20 - number)
+
+    return result
 
 def run():
     assert is_number_correct(0) == (False, 10)

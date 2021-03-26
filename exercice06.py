@@ -1,6 +1,10 @@
 def factorial(number):
-    # Votre code ici
-    return
+    result = 1
+
+    for i in range(abs(number)):
+        result *= (i + 1)
+
+    return number < 0 and -result or result
 
 def run():
     assert factorial(1) == 1

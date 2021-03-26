@@ -1,6 +1,5 @@
 def square(number):
-    # Votre code ici
-    return
+    return number * number
 
 def run():
     assert square(1) == 1

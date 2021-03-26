@@ -1,6 +1,11 @@
-def get_letter_count(word):
-       # Votre code ici
-       return
+def get_letter_count(word: str):
+       result = 0
+
+       for letter in word:
+              if letter.isalpha():
+                     result += 1
+
+       return result
 
 def run():
    assert get_letter_count("Oui") == 3

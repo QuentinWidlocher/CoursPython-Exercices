@@ -1,6 +1,14 @@
-def get_word_count(sentence):
-       # Votre code ici
-       return
+def get_word_count(sentence: str):
+       result = 0
+
+       word_list = sentence.split(" ")
+
+       for word in word_list:
+              if word.isalpha():
+                     result += 1
+
+       return result
+
 
 def run():
    assert get_word_count("Bonjour") == 1
